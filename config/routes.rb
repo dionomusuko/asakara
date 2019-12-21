@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'rooms/index'
-  get 'rooms/show'
-  get 'rooms/new'
-  get 'rooms/edit'
   root 'home#index'
+
+  resources :rooms
+
 
   # devise
   devise_for :users, :controllers => {
