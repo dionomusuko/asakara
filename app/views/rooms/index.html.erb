@@ -1,2 +1,6 @@
-<h1>Rooms#index</h1>
-<p>Find me in app/views/rooms/index.html.erb</p>
+<h1>ルーム一覧</h1>
+<p>あなたの興味のあるルームにジョインしましょう</p>
+
+<% @rooms.each do |room| %>
+  <%= room.title %>
+<% end %>
