@@ -4,5 +4,7 @@
 
 <ul>
   <p>メンバー</p>
-  <li><%= @room.user.name %></li>
+  <% @room.groups.each do |room_user| %>
+  <li><%= room_user.user.name %></li>
+  <% end %>
 </ul>

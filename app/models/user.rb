@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :rooms, through: :group
+  has_many :rooms, through: :groups
   has_many :groups
 end
