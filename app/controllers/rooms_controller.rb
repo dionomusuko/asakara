@@ -8,20 +8,16 @@ class RoomsController < ApplicationController
   end
 
   def new
+    @room = Room.new
   end
 
   def create
-    if current_user
-      @room = Room.new(room_params)
-      if @room.save
-        redirect_to rooms_path, notice: "ルーム「#{@room.name}」を登録しました。"
-      else
-        render :index
-      end
+    @room = Room.new(room_params)
+    if @room.save
+      redirect_to rooms_path, notice: "ルーム「#{@room.title}」を登録しました。"
     else
-      redirect_to root_path, notice: "ログインしてください"
+      render :index, notice: "ルーム「#{@room.title}」を登録できませんでした。"
     end
-
   end
 
   def edit
