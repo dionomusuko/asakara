@@ -1,2 +1,5 @@
-<h1>Rooms#new</h1>
-<p>Find me in app/views/rooms/new.html.erb</p>
+<h1>ルームの追加</h1>
+<div class="nav justify-content-end">
+  <%= link_to '一覧', rooms_path, class: 'nav-link' %>
+  <%= render partial: 'form', locals: {room: @room} %>
+</div>
