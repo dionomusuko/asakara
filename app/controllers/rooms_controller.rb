@@ -1,6 +1,10 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
+    if current_user
+      @rooms = Room.all
+    else
+      redirect_to root_path, notice: "ログインしてください"
+    end
   end
 
   def show
@@ -18,6 +22,12 @@ class RoomsController < ApplicationController
     else
       render :index, notice: "ルーム「#{@room.title}」を登録できませんでした。"
     end
+  end
+
+  def destroy
+    set_room
+    @room.destroy
+    redirect_to rooms_path, notice: "投稿「#{@room.title}」を削除しました"
   end
 
   def edit

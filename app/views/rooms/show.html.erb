@@ -8,3 +8,4 @@
   <li><%= room_user.user.name %></li>
   <% end %>
 </ul>
+<%= link_to '削除', @room, method: :delete, data: { confirm: "タスク「#{@room.title}」を削除してもよろしいですか？"}, class: 'btn btn-danger' %>
