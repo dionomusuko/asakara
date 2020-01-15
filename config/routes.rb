@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :rooms
-  post "rooms/join"
+  resources :rooms do
+    post 'add' => 'groups#create'
+    delete '/add' => 'groups#destroy'
+  end
+
   # devise
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"

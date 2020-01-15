@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
   def destroy
     user = current_user
     room = Room.find(params[:room_id])
-    if group == Group.find_by(user_id: user.id, room_id: room.id)
+    if group = Group.find_by(user_id: user.id, room_id: room.id)
       group.delete
       redirect_to rooms_path
     else
