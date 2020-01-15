@@ -2,7 +2,11 @@
   <%= form_with model: @room do |f| %>
     <div class="form_group">
       <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-control', rows: "2", id: 'post_title' %>
+      <%= f.text_field :title, class: 'form-control', id: 'post_title' %>
+    </div>
+    <div class="form_group">
+      <%= f.label :detail %>
+      <%= f.text_area :detail, class: 'form-control', rows: "4", id: 'post_title' %>
     </div>
     <div class="form_group">
       <%= f.submit nil, class: 'btn btn-primary' %>
