@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get "user/:id", :to => "users/registrations#detail"
     get "sign_up", :to => "users/registrations#new"
     get "sign_in", :to => "users/sessions#new"
-    get "sign_out", :to => "users/sessions#destroy"
+    delete "sign_out", :to => "users/sessions#destroy"
   end
   devise_for :users, :controllers => {
       :registrations => 'users/registrations',
