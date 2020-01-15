@@ -3,11 +3,13 @@
 
 <% @rooms.each do |room| %>
   <ul>
-    <%= link_to room.title, room_path(room) %>
-    <li>
-      <%= link_to 'join', '#' ,class: 'btn btn-success' %>
-    </li>
+    <li><%= link_to room.title, room_path(room) %></li>
+    <% if !Group.exists?(user_id:current_user.id,room_id:room.id)%>
+      <p><%= link_to '参加', room_add_path(room), method: :post, class: 'btn btn-success' %></p>
+    <% else %>
+      <p><%= link_to "退会",room_add_path(room), method: :delete, class: :'btn btn-danger' %></p>
+    <% end %>
   </ul>
 
 <% end %>
-
+<%= link_to "新規追加", new_room_path, class: 'btn btn-primary' %>
