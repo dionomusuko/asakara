@@ -33,18 +33,12 @@ class RoomsController < ApplicationController
   def edit
   end
 
-  #def join
-   # set_room
-    #Group.new(@room.id, current_user.id)
-    #Group.save
-  #end
-
   private
   def set_room
     @room = Room.find(params[:id])
   end
 
   def room_params
-    params.require(:room).permit(:title)
+    params.require(:room).permit(:title, :detail)
   end
 end
