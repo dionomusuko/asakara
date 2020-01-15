@@ -14,3 +14,18 @@
  *= require_self
  */
 @import "bootstrap";
+
+// 基本設定
+html {
+  font-size: 15px;
+}
+header{
+  background-color: #FFFFFF;
+}
+body{
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  background: #F1F0F0;
+}
+ul{
+  list-style: none;
+}

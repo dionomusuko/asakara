@@ -11,14 +11,17 @@
 
   <body>
   <header>
-    <ul>
-      <li><%= link_to 'サインアップ', sign_up_path, class: 'nav-link' %></li>
-      <% if current_user %>
-        <li><%= link_to 'ログアウト', sign_out_path, method: :delete, class: 'nav-link' %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', sign_up_path, class: 'nav-link' %></li>
-      <% end %>
-    </ul>
+    <nav class="navbar navbar-expand-md navbar-light mb-3">
+      <div class="nav-bar-brand nav-class">Asakara</div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><%= link_to 'ホーム', root_path, class: 'nav-link' %></li>
+        <% if current_user %>
+          <li><%= link_to 'ログアウト', sign_out_path, method: :delete, class: 'nav-link' %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', sign_in_path, class: 'nav-link' %></li>
+          <li><%= link_to 'サインアップ', sign_up_path, class: 'nav-link' %></li>
+        <% end %>
+      </ul>
   </header>
   <div class="container">
     <% if flash.notice.present? %>
