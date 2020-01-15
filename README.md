@@ -1,24 +1,10 @@
-# README
+# Asakara
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能
 
-Things you may want to cover:
+朝活をしたい人が、自分の気になっているルームに入り、その中の人と時間を決め集まり、チャットをすることで
 
-* Ruby version
+自分が活動をしている内容を共有するアプリです。
 
-* System dependencies
+他人に監視されることで、進捗も捗ると考えています。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
