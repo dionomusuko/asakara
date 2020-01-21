@@ -14,6 +14,7 @@ gem 'bootstrap'
 gem 'devise'
 gem 'bcrypt'
 gem 'jquery-rails'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
