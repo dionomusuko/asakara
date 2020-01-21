@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'chat_rooms/show'
   root 'home#index'
 
   resources :rooms do
