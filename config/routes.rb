@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     delete '/add' => 'groups#destroy'
   end
 
+  mount ActionCable.server => '/cable'
   # devise
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"
