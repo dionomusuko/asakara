@@ -1,4 +1,4 @@
-App.room = App.cable.subscriptions.create("ChatChannel", {
+App.chat = App.cable.subscriptions.create("ChatChannel", {
     connected: function() {
         console.log('connected')
         // Called when the subscription is ready for use on the server
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const button = document.getElementById('button')
     button.addEventListener('click', function(){
         const content = input.value
-        App.room.speak(content)
+        App.chat.speak(content)
         input.value = ''
     })
 })
