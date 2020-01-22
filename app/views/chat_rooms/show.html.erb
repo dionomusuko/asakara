@@ -1,6 +1,10 @@
 <h1>チャットルーム</h1>
-<input type="text" id="chat-input" />
-<button id="button" class="btn btn-primary">送信</button>
+<form class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" id="chat-input" />
+  </div>
+  <button id="button" class="btn btn-primary">送信</button>
+</form>
 <div id="messages">
   <%= render @chats %>
 </div>
