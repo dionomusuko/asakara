@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'chat_rooms/show'
   root 'home#index'
 
   resources :rooms do
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
     delete '/add' => 'groups#destroy'
   end
 
+  mount ActionCable.server => '/cable'
   # devise
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"
