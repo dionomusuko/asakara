@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 2020_01_21_103616) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "title"
+    t.string "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "detail"
   end
 
   create_table "users", force: :cascade do |t|
