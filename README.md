@@ -1,10 +1,26 @@
 # Asakara
 
-## 機能
+## 概要
 
-朝活をしたい人が、自分の気になっているルームに入り、その中の人と時間を決め集まり、チャットをすることで
+* 朝活がしたい人同士で集まり、作業の共有・進捗の確認ができる！！
 
-自分が活動をしている内容を共有するアプリです。
+## 使用技術
 
-他人に監視されることで、進捗も捗ると考えています。
+* Ruby 2.6.3
+* Ruby on Rails 5.2.3
+* SCSS
+* bootstrap
+* JavaScript
+    * Jquery
 
+* UI(Figma)
+    * https://www.figma.com/file/vR5rHc7wUmyM5Ekx2eVTfy/dio-project?node-id=82%3A53
+    
+## 機能一覧
+
+* ユーザ機能
+    * ユーザー登録・ログイン機能(devise)
+* ルーム機能
+    * ルームの CRUD
+* チャット機能
+    * チャット機能(JS)
