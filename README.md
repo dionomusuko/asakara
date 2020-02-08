@@ -12,6 +12,8 @@
 * bootstrap
 * JavaScript
     * Jquery
+* dockerfile
+    * docker-compose.yml
 
 * UI(Figma)
     * https://www.figma.com/file/vR5rHc7wUmyM5Ekx2eVTfy/dio-project?node-id=82%3A53
