@@ -10,4 +10,13 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/myappd
+      - .:/app
+  nginx:
+    build: containers/nginx
+    volumes:
+      - ./public:/app/public
+      - ./tmp:/app/tmp
+    ports:
+      - "80:80"
+    depends_on:
+      - web
