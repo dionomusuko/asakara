@@ -14,3 +14,6 @@
       password_confirmation: "password",
   )
 end
+
+Room.create!(title: "プログラミング", detail: "プログラミング好き募集 初心者大歓迎")
+Chat.create!(content: "test")
