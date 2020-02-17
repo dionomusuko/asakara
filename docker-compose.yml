@@ -11,9 +11,8 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - public-data:/webapp/public
-      - tmp-data:/webapp/tmp
-      - log-data:/webapp/log
+      - public-data:/app/public
+      - tmp-data:/app/tmp
   nginx:
     build: containers/nginx
     volumes:
@@ -23,7 +22,7 @@ services:
       - "80:80"
     depends_on:
       - web
-  volumes:
-    public-data:
-    tmp-data:
-    log-data:
+volumes:
+  public-data:
+  tmp-data:
+
